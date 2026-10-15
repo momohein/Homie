@@ -65,7 +65,7 @@ public class Bill {
     // One BillPayment per housemate, tracking their share and paid status.
     // orphanRemoval + cascade ALL means deleting a Bill cleans up its
     // BillPayment rows automatically.
-    @OneToMany(mappedBy = "bill", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "bill", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<BillPayment> payments = new ArrayList<>();
 
     public Bill() {
