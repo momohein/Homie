@@ -49,7 +49,7 @@ public class SecurityConfig {
                         .requestMatchers(
                                 "/login", "/register",
                                 "/forgot-password", "/reset-password",
-                                "/css/**", "/js/**"
+                                "/css/**", "/js/**", "/images/**"
                         ).permitAll()
                         .anyRequest().authenticated()
                 )
